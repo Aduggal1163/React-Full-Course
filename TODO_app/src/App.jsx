@@ -1,24 +1,34 @@
 import AddTodo from "./Components/AddTodo";
 import AppName from "./Components/AppName";
-import "./App.css"
+import "./App.css";
 import TodoItems from "./Components/TodoItems";
+import { useState } from "react";
+import Welcome from "./Components/Welcome";
 function App() {
-  const todoItems=[
-    {
-      name:"Chicken & eggs",
-      dueDate:'24/1/2025',
-    },
-    {
-      name:"Milk",
-      dueDate:'24/1/2025',
-    }
-  ]
+  const [todoItems, setTodoItems] = useState([]);
+  const handleNewTodos = (itemName, itemDate) => {
+    console.log(`${itemName}|| ${itemDate}`);
+    const newTodoItems = [
+      ...todoItems,
+      {
+        name: itemName,
+        dueDate: itemDate,
+      },
+    ];
+    setTodoItems(newTodoItems);
+  };
+  const handleDelete=(todoName)=>{
+    const newTodoItems=todoItems.filter(item=>item.name !== todoName);
+    setTodoItems(newTodoItems);
+    // console.log("Item deleted")
+  }
   return (
-      <center className="todo-container">
-        <AppName />
-        <AddTodo />
-        <TodoItems todoItems={todoItems}/>
-      </center>
+    <center className="todo-container">
+      <AppName />
+      <AddTodo onNewTodos={handleNewTodos} />
+      {todoItems.length===0?<Welcome/>: null}
+      <TodoItems todoItems={todoItems} handleDeleteClick={handleDelete}/> 
+    </center>
   );
 }
 

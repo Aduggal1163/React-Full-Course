@@ -1,8 +1,6 @@
 import React from 'react'
 
-export default function TodoItem({todoName, todoDate}) {
-    // let todoName="Buy Kinder Joy";
-    // let todoDate="21-01-2025"
+export default function TodoItem({todoName, todoDate, handleDeleteClick}) {
   return (
     <div class="container">
        <div class="row ad-row">
@@ -13,7 +11,7 @@ export default function TodoItem({todoName, todoDate}) {
             {todoDate}
           </div>
           <div class="col-2">
-          <button type="button" class="btn btn-danger ad-button">Delete</button>
+          <button type="button" class="btn btn-danger ad-button" onClick={()=>handleDeleteClick(todoName)}>Delete</button>
           </div>
         </div>
 
