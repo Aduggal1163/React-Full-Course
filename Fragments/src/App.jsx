@@ -1,5 +1,7 @@
 import "./App.css";
+import Container from "./Container";
 import ErrorMessage from "./ErrorMessage";
+import FoodInput from "./FoodInput";
 import FoodItems from "./FoodItems";
 function App() {
   let foodItemss = [
@@ -10,18 +12,23 @@ function App() {
     "Chicken and eggs",
     "Ghee",
   ];
+
   return (
     <>
       <h1 className="foodHeading">Healthy food</h1>
-      {/* <ul class="list-group">
-          <li class="list-group-item">Daal</li>
-          <li class="list-group-item">Green Veegies</li>
-          <li class="list-group-item">Roti</li>
-          <li class="list-group-item">Dairy Products</li>
-          <li class="list-group-item">Chicken and eggs</li>
-        </ul> */}
       <ErrorMessage items={foodItemss}/>
+      <FoodInput/>
+      
       <FoodItems items={foodItemss}/>
+      {/* eg of children props */}
+      <Container>
+      <p>random text</p>
+      <p>random text</p>
+      <p>random text</p>
+      <p>random text</p>
+      <p>random text</p>
+      <p>random text</p>
+      </Container>
     </>
   );
 }
