@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import { IoMdAddCircle  } from "react-icons/io";
 export default function AddTodo({ onNewTodos }) {
   const [todoName, setTodoName] = useState();
   const [todoDate, setTodoDate] = useState();
@@ -31,7 +31,7 @@ export default function AddTodo({ onNewTodos }) {
             type="button"
             class="btn btn-success ad-button"
           >
-            Add
+            <IoMdAddCircle  />
           </button>
         </div>
       </div>

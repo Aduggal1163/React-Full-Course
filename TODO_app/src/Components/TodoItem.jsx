@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { FaTrash } from "react-icons/fa";
 export default function TodoItem({todoName, todoDate, handleDeleteClick}) {
   return (
     <div class="container">
@@ -11,7 +11,7 @@ export default function TodoItem({todoName, todoDate, handleDeleteClick}) {
             {todoDate}
           </div>
           <div class="col-2">
-          <button type="button" class="btn btn-danger ad-button" onClick={()=>handleDeleteClick(todoName)}>Delete</button>
+          <button type="button" class="btn btn-danger ad-button" onClick={()=>handleDeleteClick(todoName)}><FaTrash/></button>
           </div>
         </div>
 
