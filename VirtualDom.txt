@@ -1,0 +1,3 @@
+when component data changes, React updates the virtual Dom state to mirror these changes
+react then compares the current and prev versions of the virtual Dom it identifies the specific nodes that need updating
+only these nodes are updated in real browser dom making it efficient
