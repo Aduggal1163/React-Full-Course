@@ -1,7 +1,8 @@
 import ADButton from "./ADButton";
 import { Hello } from "./Hello";
 import Random from "./Random";
-
+import Focus from "./Focus.jsx"
+import Counter from "./Counter.jsx";
 function App(){
   return (
     <>
@@ -11,6 +12,8 @@ function App(){
       <Random/>
       <Random/>
       <Random/>
+      <Focus/>
+      <Counter/>
     </> 
   )
 }

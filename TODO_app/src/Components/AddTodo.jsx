@@ -25,25 +25,25 @@ export default function AddTodo({ onNewTodos }) {
     // setTodoDate("");    
   }
   return (
-    <div class="container text-center">
-      <form class="row ad-row"
+    <div className="container text-center">
+      <form className="row ad-row"
             onSubmit={handleSubmit}>
-        <div class="col-4">
+        <div className="col-4">
           <input type="text" 
           ref={todoNameElement}
           // value={todoName} 
           // onChange={handleNameChange} 
           placeholder="Enter Todo Here" />
         </div>
-        <div class="col-4">
+        <div className="col-4">
           <input type="date"
           ref={todoDateElement}
           //  value={todoDate} onChange={handleDateChange}
           />
         </div>
-        <div class="col-2">
+        <div className="col-2">
           <button
-            class="btn btn-success ad-button"
+            className="btn btn-success ad-button"
           >
             <IoMdAddCircle  />
           </button>

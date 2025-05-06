@@ -4,11 +4,11 @@ const ButtonContainer=({onButtonClick})=>{
         'C','1','2','+','3','4','-','5','6','*','7','8','/','=','9','0','.'
     ]
     return(
-        <div className={styles.buttonContainer}>
+        <div classNameName={styles.buttonContainer}>
         {
             buttonNames.map((buttonName)=>{
                 return <button onClick={()=>onButtonClick(buttonName)}
-                 className={styles.button}>{buttonName}</button>
+                 classNameName={styles.button}>{buttonName}</button>
             })
         }
         </div>

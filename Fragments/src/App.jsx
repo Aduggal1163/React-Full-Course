@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <h1 className="foodHeading">Healthy food</h1>
+      <h1 classNameName="foodHeading">Healthy food</h1>
       <ErrorMessage items={foodItemss}/>
       <FoodInput/>
       

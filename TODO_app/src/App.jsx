@@ -23,7 +23,7 @@ function App() {
     // console.log("Item deleted")
   }
   return (
-    <center className="todo-container">
+    <center classNameName="todo-container">
       <AppName />
       <AddTodo onNewTodos={handleNewTodos} />
       {todoItems.length===0?<Welcome/>: null}
